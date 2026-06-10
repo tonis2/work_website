@@ -1,0 +1,13 @@
+{
+  "name": "internus-form-handler",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Contact form handler for internus.dev",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.0"
+  }
+}

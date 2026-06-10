@@ -1,0 +1,26 @@
+# Internus site block — append to /root/loodus/Caddyfile (or import it).
+# Caddy obtains the TLS certificate automatically once the domain's
+# A record points at this server.
+#
+# TODO: replace internus.dev with the registered domain.
+
+internus.dev {
+	root * /var/www/internus
+	encode zstd gzip
+	file_server
+
+	reverse_proxy /api/contact* 127.0.0.1:8721
+
+	header {
+		X-Content-Type-Options nosniff
+		X-Frame-Options DENY
+		Referrer-Policy strict-origin-when-cross-origin
+	}
+
+	@static path /css/* /js/* /assets/*
+	header @static Cache-Control "public, max-age=86400"
+}
+
+www.internus.dev {
+	redir https://internus.dev{uri} permanent
+}

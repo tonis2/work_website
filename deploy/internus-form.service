@@ -1,0 +1,26 @@
+# systemd unit for the contact form handler.
+# Install: copy to /etc/systemd/system/internus-form.service, then
+#   systemctl daemon-reload && systemctl enable --now internus-form
+# Requires /var/www/internus-form/.env (copy from form-handler/.env.example).
+
+[Unit]
+Description=Internus contact form handler
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/internus-form
+EnvironmentFile=/var/www/internus-form/.env
+ExecStart=/usr/bin/node server.js
+Restart=on-failure
+RestartSec=5
+
+# Hardening
+DynamicUser=yes
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target
