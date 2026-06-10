@@ -207,6 +207,19 @@ section { padding: 80px 0; border-bottom: 1px solid var(--border); }
 .project .body p { margin: 0 0 0.7rem; color: var(--text-dim); font-size: 0.97rem; }
 .project .body p strong { color: var(--text); }
 
+.testimonial {
+  margin: 1.4rem 0;
+  padding: 1.2rem 1.4rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  max-width: 70ch;
+}
+.testimonial blockquote { margin: 0; color: var(--text); font-size: 1.05rem; line-height: 1.6; }
+.testimonial figcaption { margin-top: 0.8rem; font-family: var(--mono); font-size: 0.85rem; color: var(--text-dim); }
+.testimonial figcaption strong { color: var(--accent); font-weight: 600; }
+
 /* ---------- about ---------- */
 
 .about-points {

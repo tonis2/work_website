@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Case study: Mobile app for field workers — Internus</title>
-  <meta name="description" content="How Internus built a mobile app for field workers at an EU logistics company. Problem, approach, stack and outcome.">
+  <title>Case study: Mobile banking &amp; wallet app — Internus</title>
+  <meta name="description" content="How Internus built a secure Flutter banking app with mobile wallet push provisioning for an EU fintech. Problem, approach, stack and outcome.">
   <link rel="canonical" href="https://internus.dev/projects/project-2.html">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/css/style.css">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Case study: Mobile app for field workers">
-  <meta property="og:description" content="Problem, approach, stack and outcome of a field-worker app for an EU logistics company.">
+  <meta property="og:title" content="Case study: Mobile banking &amp; wallet app">
+  <meta property="og:description" content="Problem, approach, stack and outcome of a secure Flutter banking app with wallet push provisioning for an EU fintech.">
   <meta property="og:url" content="https://internus.dev/projects/project-2.html">
   <meta property="og:image" content="https://internus.dev/assets/og-image.png">
 </head>
@@ -22,26 +22,45 @@
   <section>
     <div class="container">
       <p class="section-label">// case study</p>
-      <h2>Mobile app for field workers</h2>
-      <p class="section-intro">Logistics company, EU · [PLACEHOLDER: year, engagement length]</p>
+      <h2>Mobile banking &amp; wallet app</h2>
+      <p class="section-intro">Paysure — fintech, EU · Freelance engagement · 2023–ongoing (3 years)</p>
 
       <article class="project">
         <div class="meta">
           <strong>At a glance</strong>
-          [PLACEHOLDER: client industry &amp; size]
+          Freelance engagement for Paysure, an EU fintech. We led the app-side development of its
+          mobile banking product — a Flutter app spanning onboarding, card management, wallet
+          provisioning and payments on iOS and Android.
           <div class="tags">
-            <span class="tag">iOS</span><span class="tag">Android</span><span class="tag">API</span>
+            <span class="tag">Flutter</span><span class="tag">Wallet / Push provisioning</span><span class="tag">Secure architecture</span>
           </div>
         </div>
         <div class="body">
-          <p><strong>The problem.</strong> [PLACEHOLDER — describe the client's situation: what was slow,
-            broken, expensive or impossible before. 2–4 sentences. Concrete pain beats tech detail.]</p>
-          <p><strong>The approach.</strong> [PLACEHOLDER — what you decided to build and why, key technical
-            decisions, offline/sync challenges, release process. 3–5 sentences.]</p>
-          <p><strong>The outcome.</strong> [PLACEHOLDER — measurable results: adoption, time saved per
-            worker, error rates, support tickets. Numbers if at all possible.]</p>
+          <p><strong>The problem.</strong> Paysure needed to put a full banking experience in its
+            customers' hands — issuing payment cards, adding them straight to Apple Pay and Google Pay,
+            and moving money — all inside one app on both iOS and Android. In fintech there is no room
+            for rough edges or security gaps, so the app had to clear a high bar for both user experience
+            and protection of sensitive financial data.</p>
+          <p><strong>The approach.</strong> We built the app in Flutter so iOS and Android shipped from a
+            single codebase without giving up native capabilities. Payment cards were added to the device
+            wallets through in-app push provisioning, taking users from opening the app to tap-to-pay in a
+            few steps. Sensitive data was held in the platform secure storage / keychain and protected with
+            [PLACEHOLDER: list what you actually used — e.g. biometric auth, certificate pinning,
+            biometric authentication, certificate pinning and jailbreak/root detection to guard against
+            tampering and interception. We then took the app
+            through the full App Store and Play review and release process for a regulated financial product.</p>
+          <p><strong>The outcome.</strong> The app shipped to the App Store and Google Play and now serves
+            tens of thousands of users, putting card issuing, wallet provisioning and payments in their
+            hands from one Flutter codebase. The engagement has run since 2023 and is ongoing — a long-term
+            relationship built on a product the client is happy with.</p>
         </div>
       </article>
+
+      <!-- PLACEHOLDER: add a real quote from Paysure here, or delete this block until you have one -->
+      <figure class="testimonial">
+        <blockquote>"[PLACEHOLDER — a sentence or two from the client about the work and working with you.]"</blockquote>
+        <figcaption><strong>[Name]</strong> — [Role], Paysure</figcaption>
+      </figure>
 
       <p><a class="btn" href="/#contact">Have a similar problem? Get in touch</a></p>
     </div>
