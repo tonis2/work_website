@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Internus — Software problems solved. Web, mobile, backend.</title>
-  <meta name="description" content="Internus LTD is a software consultancy with 10 years of hands-on experience building websites, mobile apps and backend systems. Remote, B2B, direct contact with the engineer doing the work.">
+  <meta name="description" content="Internus LTD is a software consultancy with 10 years of hands-on experience building websites, mobile apps and backend systems. Remote, B2B, working directly with the people who build your software.">
   <link rel="canonical" href="https://internus.dev/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/css/style.css">
@@ -29,17 +29,7 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container">
-    <a class="logo" href="/">internus<span class="tld">.dev</span></a>
-    <nav class="site-nav">
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+<site-header></site-header>
 
 <main>
 
@@ -49,7 +39,7 @@
       <h1>Software problems solved. Web, mobile, backend.</h1>
       <p class="lede">
         Ten years of shipping production software — websites, mobile apps and the
-        servers behind them. Work directly with the engineer who builds it.
+        servers behind them. Work directly with the people who build it.
         Remote, contract-based (B2B).
       </p>
       <a class="btn" href="#contact">Tell us about your problem</a>
@@ -62,43 +52,28 @@
       <p class="section-label">// services</p>
       <h2>What we do</h2>
       <p class="section-intro">
-        One engineer, full stack. No hand-offs between departments — the person
-        you talk to is the person writing the code.
+        Full stack, end to end. No hand-offs between departments — the people
+        you talk to are the people writing the code.
       </p>
       <div class="grid-3">
-        <div class="card">
-          <div class="icon">&lt;/&gt;</div>
-          <h3>Web</h3>
-          <p>Websites and web applications — from marketing sites that load fast
-             and rank well, to complex single-page apps and admin dashboards.</p>
-          <ul>
-            <li>Frontend (React, Vue, plain JS)</li>
-            <li>E-commerce &amp; CMS</li>
-            <li>Performance &amp; SEO fixes</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="icon">[#]</div>
-          <h3>Apps</h3>
-          <p>Mobile applications for iOS and Android — new builds, feature work
-             on existing apps, or rescuing a project that stalled.</p>
-          <ul>
-            <li>Native &amp; cross-platform</li>
-            <li>App Store / Play releases</li>
-            <li>Maintenance of legacy apps</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="icon">$_</div>
-          <h3>Servers &amp; Backend</h3>
-          <p>The invisible part that everything depends on — APIs, databases,
-             integrations and the infrastructure they run on.</p>
-          <ul>
-            <li>REST/GraphQL APIs, databases</li>
-            <li>Third-party integrations</li>
-            <li>Deployment, monitoring, VPS ops</li>
-          </ul>
-        </div>
+        <service-card
+          icon="</>"
+          heading="Web"
+          body="Websites and web applications — from marketing sites that load fast and rank well, to complex single-page apps and admin dashboards."
+          items='["Frontend (React, Vue, plain JS)", "E-commerce & CMS", "Performance & SEO fixes"]'>
+        </service-card>
+        <service-card
+          icon="[#]"
+          heading="Apps"
+          body="Mobile applications for iOS and Android — new builds, feature work on existing apps, or rescuing a project that stalled."
+          items='["Native & cross-platform", "App Store / Play releases", "Maintenance of legacy apps"]'>
+        </service-card>
+        <service-card
+          icon="$_"
+          heading="Servers & Backend"
+          body="The invisible part that everything depends on — APIs, databases, integrations and the infrastructure they run on."
+          items='["REST/GraphQL APIs, databases", "Third-party integrations", "Deployment, monitoring, VPS ops"]'>
+        </service-card>
       </div>
     </div>
   </section>
@@ -111,56 +86,38 @@
         A few representative projects. More detail available on request.
       </p>
 
-      <!-- PLACEHOLDER: replace with a real project -->
-      <article class="project">
-        <div class="meta">
-          <strong>E-commerce platform rebuild</strong>
-          Retail company, EU
-          <div class="tags">
-            <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span>
-          </div>
-        </div>
-        <div class="body">
-          <p><strong>Problem:</strong> [PLACEHOLDER — what was broken or missing for the client]</p>
-          <p><strong>What we built:</strong> [PLACEHOLDER — the solution, in one or two sentences]</p>
-          <p><strong>Outcome:</strong> [PLACEHOLDER — measurable result: speed, revenue, time saved]</p>
-          <p><a href="/projects/project-1.html">Read the full case study →</a></p>
-        </div>
-      </article>
+      <!-- PLACEHOLDER: replace with real project details -->
+      <project-card
+        title="E-commerce platform rebuild"
+        client="Retail company, EU"
+        href="/projects/project-1.html"
+        tags='["React", "Node.js", "PostgreSQL"]'
+        problem="[PLACEHOLDER — what was broken or missing for the client]"
+        built="[PLACEHOLDER — the solution, in one or two sentences]"
+        outcome="[PLACEHOLDER — measurable result: speed, revenue, time saved]">
+      </project-card>
 
-      <!-- PLACEHOLDER: replace with a real project -->
-      <article class="project">
-        <div class="meta">
-          <strong>Mobile app for field workers</strong>
-          Logistics company, EU
-          <div class="tags">
-            <span class="tag">iOS</span><span class="tag">Android</span><span class="tag">API</span>
-          </div>
-        </div>
-        <div class="body">
-          <p><strong>Problem:</strong> [PLACEHOLDER]</p>
-          <p><strong>What we built:</strong> [PLACEHOLDER]</p>
-          <p><strong>Outcome:</strong> [PLACEHOLDER]</p>
-          <p><a href="/projects/project-2.html">Read the full case study →</a></p>
-        </div>
-      </article>
+      <!-- PLACEHOLDER: replace with real project details -->
+      <project-card
+        title="Mobile app for field workers"
+        client="Logistics company, EU"
+        href="/projects/project-2.html"
+        tags='["iOS", "Android", "API"]'
+        problem="[PLACEHOLDER]"
+        built="[PLACEHOLDER]"
+        outcome="[PLACEHOLDER]">
+      </project-card>
 
-      <!-- PLACEHOLDER: replace with a real project -->
-      <article class="project">
-        <div class="meta">
-          <strong>Backend &amp; infrastructure overhaul</strong>
-          SaaS company
-          <div class="tags">
-            <span class="tag">API</span><span class="tag">Docker</span><span class="tag">Linux</span>
-          </div>
-        </div>
-        <div class="body">
-          <p><strong>Problem:</strong> [PLACEHOLDER]</p>
-          <p><strong>What we built:</strong> [PLACEHOLDER]</p>
-          <p><strong>Outcome:</strong> [PLACEHOLDER]</p>
-          <p><a href="/projects/project-3.html">Read the full case study →</a></p>
-        </div>
-      </article>
+      <!-- PLACEHOLDER: replace with real project details -->
+      <project-card
+        title="Backend & infrastructure overhaul"
+        client="SaaS company"
+        href="/projects/project-3.html"
+        tags='["API", "Docker", "Linux"]'
+        problem="[PLACEHOLDER]"
+        built="[PLACEHOLDER]"
+        outcome="[PLACEHOLDER]">
+      </project-card>
     </div>
   </section>
 
@@ -169,13 +126,13 @@
       <p class="section-label">// about</p>
       <h2>Why work with Internus</h2>
       <p class="section-intro">
-        Internus LTD is the consultancy of a senior software engineer with ten
-        years of professional experience across the whole stack. Small by
-        design: you get senior work without agency overhead.
+        Internus LTD is a software consultancy with ten years of experience
+        across the whole stack. Small and focused by design: you get senior
+        work without agency overhead.
       </p>
       <ul class="about-points">
-        <li><strong>Direct line to the engineer.</strong> No project managers relaying messages — questions get answered by the person writing the code.</li>
-        <li><strong>Full-stack, for real.</strong> Frontend, mobile, backend and the servers underneath — one contractor covers the whole problem.</li>
+        <li><strong>Direct line to the builders.</strong> No project managers relaying messages — questions get answered by the people writing the code.</li>
+        <li><strong>Full-stack, for real.</strong> Frontend, mobile, backend and the servers underneath — we cover the whole problem.</li>
         <li><strong>B2B and simple.</strong> You get an invoice from a registered company. Contracts, NDAs and IP transfer handled properly.</li>
         <li><strong>Remote, EU timezone.</strong> Async-friendly, with overlap for European and US-East working hours.</li>
       </ul>
@@ -223,13 +180,9 @@
 
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <span>© 2026 Internus LTD · Reg. no. [PLACEHOLDER]</span>
-    <span><a href="/privacy.html">Privacy</a></span>
-  </div>
-</footer>
+<site-footer></site-footer>
 
+<script type="module" src="/js/components.js"></script>
 <script src="/js/main.js" defer></script>
 <!-- Analytics: create a free account at goatcounter.com, then uncomment and set the code.
 <script data-goatcounter="https://YOURCODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
